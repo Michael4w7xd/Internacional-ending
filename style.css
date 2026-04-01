@@ -1,0 +1,81 @@
+body {
+  font-family: "Archivo Black", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('IMG-20260331-WA0019.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; 
+  min-height: 100vh;
+  width: 100%;
+  
+  /* Flexbox para separar el contenido arriba y abajo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor superior para el h1 (arriba izquierda) */
+.top-container {
+  display: flex;
+  justify-content: flex-start; 
+  padding: 50px; /* Margen generoso desde los bordes */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: left;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* Contenedor inferior para todo el bloque (abajo derecha) */
+.bottom-container {
+  display: flex;
+  justify-content: flex-end; 
+  padding: 50px; /* Margen generoso desde los bordes */
+  margin-top: auto; /* Empuja este contenedor al final del body */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contenedor específico para temporizador y enlace */
+.contenedor-inferior {
+  display: flex;
+  flex-direction: row;     
+  align-items: center;     
+  justify-content: center;
+  flex-wrap: wrap;         /* Responsivo: apila en pantallas pequeñas */
+  gap: 30px;               /* Distancia entre el texto y el botón */
+  margin-right: 5vw;       /* Desviación adicional del medio solicitada */
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333; /* Oscuro para contraste sobre el fondo gris */
+  border: solid 3px #ededed;
+  border-radius: 5px;
+  background-color: #ddd;
+  padding: 10px 15px; /* Padding para adaptabilidad */
+  text-align: center;
+}
+
+/* Clases originales mantenidas */
+img {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-self: center;
+}
+
+.imagen {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>???</title>
+</head>
+<body>
+  
+  <div class="top-container">
+    <h1>el fin de noticias internacional</h1>
+  </div>
+
+  <div class="bottom-container">
+    <div class="contenedor-inferior">
+      <p>Faltan<span id="temporizador"></span>para el momento</p>
+      <a href="https://ezstat.ru/1K6tH4.png">click aca para mas detalles</a>
+    </div>
+  </div>
+
+  <script>
+  function iniciarCuentaRegresiva(){let añoActual=new Date().getFullYear();let fechaObjetivo=new Date(`April 24, ${añoActual} 00:00:00`).getTime();if(new Date().getTime()>fechaObjetivo){fechaObjetivo=new Date(`April 24, ${añoActual+1} 00:00:00`).getTime();}const intervalo=setInterval(function(){let distanciamarroqui=fechaObjetivo-new Date().getTime();let dias=Math.floor(distanciamarroqui/(1000*60*60*24));let horas=Math.floor((distanciamarroqui%(1000*60*60*24))/(1000*60*60));let minutos=Math.floor((distanciamarroqui%(1000*60*60))/(1000*60));let segundos=Math.floor((distanciamarroqui%(1000*60))/1000);document.getElementById("temporizador").innerHTML=` ${dias}d ${horas}h ${minutos}m ${segundos}s `;if(distanciamarroqui<0){clearInterval(intervalo);document.getElementById("temporizador").innerHTML=" es hoy...";}},1000);}iniciarCuentaRegresiva();
+  </script>
+</body>
+</html>
